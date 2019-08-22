@@ -1,0 +1,14 @@
+use eqela:slingc:r330
+use eqela:jsh:r4
+use eqela:jkop:20190602
+
+default {
+	call buildSlingApp id=helloworld target=netcore
+}
+
+buildSlingApp : id target {
+	info
+	info Building Sling app ${id} for target ${target}
+	info
+	eqela:slingc src/sling/${id} -target=${target} -Dsling_project_version=${version} -libdir=${eqela:jkop}/src -output=build/app/${id}
+}
