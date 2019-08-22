@@ -1,0 +1,9 @@
+name: Build source code
+on: push
+jobs:
+  build:
+    name: Hello world action
+    runs-on: ubuntu-latest    
+    steps:
+      - uses: test-sling-ci/checkout@master
+      - uses: ./actions/build
