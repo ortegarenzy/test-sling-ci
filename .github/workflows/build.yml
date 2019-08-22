@@ -7,3 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - uses: ./actions/build
+      run: docker build .
