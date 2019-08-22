@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-eqela .
+/opt/eqelart/eqela .
